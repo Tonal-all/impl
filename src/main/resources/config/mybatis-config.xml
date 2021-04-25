@@ -1,0 +1,15 @@
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <!--为某个类型起别名-->
+        <!--<typeAlias type="com.flx.mybatis.guigu.bean.Employee" alias="emp"/>-->
+        <!--为某个包及其子包下所有类其别名，默认类名小写，别名不区分大小写-->
+        <!--这样会产生新的问题：若子包有相同的类名，则出现问题，这时候需要在混淆类中注解@Alias-->
+        <!--最好写全类名方便查找类-->
+        <package name="xyz.tonalall.impl"/>
+    </typeAliases>
+    <!--<mappers>-->
+    <!--</mappers>-->
+</configuration>

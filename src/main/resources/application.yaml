@@ -1,0 +1,101 @@
+#server:
+#  port: 8080
+#  servlet:
+#    session:
+#      timeout: 86400
+#  forward-headers-strategy: framework
+#spring:
+#  transaction:
+#    rollback-on-commit-failure: true
+  #druid
+# debug: ture
+spring:
+#   devtools:
+#     restart:
+#       enabled: ture
+#     freemarker:
+#     cache: false
+  transaction:
+    rollback-on-commit-failure: true
+  datasource:
+    url: jdbc:mysql://rm-bp11labi01950io698o.mysql.rds.aliyuncs.com:3306/library4
+    username: maker0
+    password: Maker0000
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    initialSize: 100
+    maxActive: 1000
+    maxOpenPreparedStatements: 20
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000
+    minIdle: 500
+    poolPreparedStatements: true
+    testOnBorrow: false
+    testOnReturn: false
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    validationQuery: select 'x'
+
+
+
+
+# mybatis:
+#   configuration:
+#     map-underscore-to-camel-case: true
+#     cache-enabled: true
+#   mapper-locations: classpath:/mapper/Db2/UserMapper.xml
+#   type-aliases-package: xyz/tonalall/impl/mapper/Db2
+# redis
+#  redis:
+#    database: 0
+#    host: 127.0.0.1
+#    port: 6379
+#    password:
+#    jedis:
+#      pool:
+#        max-active: 8
+#        max-idle: 8
+#        max-wait: -1
+#        min-idle: 0
+#    timeout: 5000
+#
+#  # thymeleaf
+#  thymeleaf:
+#    cache: false
+#    enabled: true
+#    encoding: UTF-8
+#    mode: HTML5
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    servlet:
+#      content-type: text/html
+
+db1:
+  driverClassName: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://rm-bp11labi01950io698o.mysql.rds.aliyuncs.com:3306/library_flow
+  username: maker0
+  password: Maker0000
+  initialSize: 5
+  minIdle: 5
+  maxActive: 50
+
+db2:
+  driverClassName: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://rm-bp11labi01950io698o.mysql.rds.aliyuncs.com:3306/library4
+  username: maker0
+  password: Maker0000
+  initialSize: 5
+  platform: postgres
+  minIdle: 5
+  maxActive: 50
+
+
+db3:
+  driverClassName: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://rm-bp11labi01950io698o.mysql.rds.aliyuncs.com:3306/library1
+  username: maker0
+  password: Maker0000
+  initialSize: 5
+  minIdle: 5
+  maxActive: 50

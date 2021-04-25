@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.tonalall.impl.mapper.Db1.Db1Mapper">
+
+    <select id="findLine" resultType="java.util.Map">
+        select linename,flow
+        from ${table}
+        where time_start = #{time}
+    </select>
+
+    <select id="findAgeIn" resultType="xyz.tonalall.impl.entity.AgeTool">
+        select *
+        from age_map_in
+        where time_start = #{time}
+    </select>
+
+    <select id="findAgeOut" resultType="xyz.tonalall.impl.entity.AgeTool">
+        select *
+        from age_map_out
+        where time_start = #{time}
+    </select>
+
+    <select id="find3Line" resultType="java.util.Map">
+        select linename,flow
+        from ${table}
+        where time_start = #{time}
+    </select>
+
+
+
+
+</mapper>
